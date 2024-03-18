@@ -1,0 +1,19 @@
+<h2>ch</h2>
+<script>
+    var id = "asdf"
+    var pw = 1234
+    var userID, userPW;
+
+    userID = prompt("id");
+    if(userID == id){
+        userPW = prompt("pw");
+        if(userPW == pw){
+            document.write("<h4>환영</h4>");
+        } else {
+            document.write("<h4>업슷</h4>")
+        }
+    }else {
+        document.write("<h4>존재X</h4>");
+    }
+    
+</script>

@@ -1,0 +1,23 @@
+<SCript>
+    // 숫자를 입력받는 prompt 창 표시
+var userInput = prompt("숫자를 입력하세요:");
+
+// 입력값을 정수로 변환
+var number = parseInt(userInput);
+
+// 입력값이 숫자인지 확인
+if (!isNaN(number)) {
+    // 홀수인 경우
+    if (number % 2 !== 0) {
+        console.log("입력 값 홀수");
+    }
+    // 짝수인 경우
+    else {
+        console.log("입력값 짝수");
+    }
+} else {
+    // 숫자가 아닌 경우
+    console.log("빠가야로야");
+}
+
+</SCript>
