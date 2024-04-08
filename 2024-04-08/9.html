@@ -1,0 +1,10 @@
+<script>
+    inputTxt = document.querySelector("#inputTxt");
+    printTxt = document.querySelector("#printTxt");
+    submitBtn.addEventListener("click",function()){
+        let newNode = document.createElement("p");
+        let newText = document.createTextNode(inputTxt.value);
+        newNode.appendChild(newText);
+        printTxt.appendChildI(newNode);
+    }
+</script>

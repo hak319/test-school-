@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <h1>to do list</h1>
+        <p>할일을 기록</p>
+        <form action="">
+            <input id="task" type="text" autofocus>
+            <button onclick="newTask();return false;">추가</button>
+        </form>
+        <ul id="taskList"></ul>
+    </div>
+</body>
+</html>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    #container {
+        width: 500px;
+        margin: 20px auto;
+        padding: 20px;
+    }
+    input[type="text"]{
+        width: 370px;
+        float: left;
+        height: 30px;
+        padding-left: 30px;
+    }
+    button {
+        width: 90px;
+        height: 30px;
+        float: right;
+    }
+    ul{
+        list-style: none;
+        padding-top: 30px;
+    }
+</style>
+
+<script>
+    var task = document.querySelector("#task");
+    var taskList = document.querySelector("#taskList")
+
+    function newTask(){
+        var newTask = document.createElement("li");
+        var newText = document.createTextNode(task.value);
+        newTask.appendChild(newText);
+
+        taskList.appendChild(newTask);
+        task.value = "";
+    }
+</script>

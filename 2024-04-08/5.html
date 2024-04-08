@@ -1,0 +1,13 @@
+<div id="container">
+    <h1>dom</h1>
+    <a href="#" onclick="addP(); this.onclick='';">더보기</a>
+    <div id="info"></div>
+</div>
+<script>
+    function addP() {
+        var newP = document.createElement("p");
+        var txtNode = document.createTextNode("hello");
+        newP.appendChild(txtNode);
+        document.getElementById("info").appendChild(newP)
+    }
+</script>
